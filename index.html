@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEX///8DAQQAAACSkZKWlZZDQ0S8u7y/v8AbGhz4+Pienp4/Pj+3t7d6eXo4Nzju7u7Z2NlgX2AgHyDOzs7k5OSBgIEXFhirq6ssLC0xMDFJSEkkIyXz8/MQDhGMjIxzc3RoZ2ijoqPHx8e9fAQnAAAD/klEQVR4nO3d6VajQBCG4VCCWZ1kNJDFbHr/FzksSehAAa02Ul3zvb/iwgnPAVSgG0cjrnUYJRT4FCVRuGYtXNOY0oZe5y+WrXI8tQRG3vGKiCI74t5PXxbtbYAbf4EpcWMh3Hot3HUDV54ehEVEq07hwmdgSlx0CkPPhbNO4ZPnwhBCCKUHIYTy+46QZPdzIe3Gz3Ib76qr+w1h1LnIkEUQ1oNQWBAyQSgsCJkgFBaETBAKC0ImCIUFIROEwoKQCUJhQcgEobAgZIJQWBAyQSgsCJkgFBaETBAKq1fhpGMciFNJU70K/7SOLaKJU0lTEDJBWPb/CouxZoqFRElm1CskehudUuJNOHM1CHEpRJgBRylRrbAAZrPDSiG3pb+cFOENuJzoEZI5SvcOfDf3Ur+FdHyOqVyLEqhFmE8VO9Ej8PCab1wVQqJ8cnFBNI7BQI/wWLzKiA+7qBphQPGN+LiL6hEaxOsWvAHVCAN6KT4oZvvfdlFNwvtWrAAVCQ3iYWL+9tcjvBOXJlCV8Eo0d1FtwoBONeBdGOo4e6L47b263FX4NnMU/1CPXzt7ovpEQLVXMSB0HIRMEJZt23+6B04lTfUqPL3ErTmVNIU7pEwQCgtCJgiFBSEThMLqVXj+29rFJaSxXoW79r9Lj04lTeHcggnCMgidSpoaaEyUeQ+45wYZE3Va7437+OPzi5sOUoTZ9e9pRNqueRvf/pR/batnPE11PU7F1+aKhA+X82/As6IRQ3Qx7/uWQC1Cyp4Qfn+T6zE4upi/LXwXZo9AP+yvu6uxBbUIKclfHOb5/vpkApUIAxrnr6bZADBzF1UkpOeCGFWBWoTpGxdbcflRfO5c3ttXIkzf+dP4VAnUI7xvxayLsaweoUE8m4sqEt6JD0BVwuuxeHlcUNd8i2wrXqrLXYWb3dxNA4+JomN1Z1R3FaN2tKkT1oLQURAyfW1GSUuJU0lTvQqjyWtLE4v/nuUg3CFlglBYEDJBKCwImSAUFoRM9sJN+yyeD6eSpoYcE6XgOVFz9WdPEDqVNAUhE4RldsLVwlEDzCG1E/o8JspO6POdGQghhBBCCCGEEEIIIYQQwt8T6j8/HE0dxa+EBGG/QcgEYRmETiVNDfmcKAX3ntar9pxKmsI9YCYIhQUhE4TCgpAJQmFByAShsCBkglBYEDJBKCwImSAUFoRMEAoLQiYIhQUhE4TCgpAJQmFByAShsFwId59juX3ufi4MXI0t7Knq2n5D6FcQQig/CCGUn4Uw9Fw46xQuPBcuOoWr2p8JPkVkMax167XQ5mmNG6+FGwvhaO8vkfY2wOzfAPhpJIoa5g7ViDFzWiK9bJVjS2DaOowSv4iUROGatfwDQdebL5XBHAsAAAAASUVORK5CYII=">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1>Todo App</h1>
+    <div class="wrapper">
+        <form>
+            <input id="todo-input" type="text" 
+            placeholder="write anything and hit enter to add" autocomplete="off">
+            <button id="add-button">ADD</button>
+        </form>
+        <ul id="todo-list">
+            <li class="todo">
+                <input type="checkbox" id="todo-1">
+                <label class="custom-checkbox" for="todo-1">
+                    <svg fill="transparent" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
+                    </svg>
+                </label>
+                <label for="todo-1" class="todo-text">
+                    webdev project with html, css and js
+                </label>
+                <button class="delete-button">
+                    <svg fill="var(--secondary-color)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
+                    </svg>
+                </button>
+            </li>
+            <li class="todo">
+                <input type="checkbox" id="todo-2">
+                <label class="custom-checkbox" for="todo-2">
+                    <svg fill="transparent" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
+                    </svg>
+                </label>
+                <label for="todo-2" class="todo-text">
+                    webdev project with html, css and js
+                </label>
+                <button class="delete-button">
+                    <svg fill="var(--secondary-color)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
